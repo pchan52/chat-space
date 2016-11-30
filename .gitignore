@@ -11,3 +11,10 @@
 /log/*
 !/log/.keep
 /tmp
+/vendor/*
+
+*.png
+*.jpg
+*.jpeg
+*.gif
+
