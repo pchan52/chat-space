@@ -7,7 +7,7 @@
   padding: 20px 40px;
 
   .chat-footer__body {
-    // display: inline-block;
+    display: inline-block;
     position: relative;
     height: 50px;
     display: inline-flex;
@@ -18,7 +18,7 @@
       margin-right: 15px;
       resize: none;
       overflow: auto; //ブラウザ依存(普通スクロール)
-      width: 100%
+      width: 100%;
 
       &:focus{
         border: 1px solid $bluefont;
