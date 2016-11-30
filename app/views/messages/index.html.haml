@@ -1,0 +1,28 @@
+.content
+  .content-side
+    =render partial: 'shared/side-menu'
+
+  .content-main
+    .chat-header.clearfix
+      .chat-header--left
+        %h2.group-name VRチーム
+        %p.users
+          Members: pchan
+
+      .chat-header--right
+        %a.edit-btn Edit
+
+    .chat-body
+      .chat-messages
+        .chat-messages__message
+          .chat-message__header.clearfix
+            %p.chat-message__name 名前
+            %p.chat-message__date 2016/12/1 00:00:00
+          %p.chat-message__content メッセージ
+
+    .chat-footer
+      .chat-footer__body
+        %textarea{ row: 1, placeholder: 'Type a message' }
+        %label.chat-footer__file
+          %i.fa.fa-picture-o{ area: {hidden: :true} }
+        %input{ type: "submit", value: 'Send' }
