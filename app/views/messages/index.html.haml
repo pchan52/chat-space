@@ -21,8 +21,9 @@
           %p.chat-message__content メッセージ
 
     .chat-footer
-      .chat-footer__body
-        %textarea{ row: 1, placeholder: 'Type a message' }
-        %label.chat-footer__file
-          %i.fa.fa-picture-o{ area: {hidden: :true} }
-        %input{ type: "submit", value: 'Send' }
+      = form_for @message, url: messages_path do |f|
+        .chat-footer__body
+          =f.text_area :body, placeholder: 'Type a message', row: 1
+          %label.chat-footer__file
+            %i.fa.fa-picture-o{ area: {hidden: :true} }
+          %input{ type: "submit", value: 'Send' }
