@@ -7,4 +7,6 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    -flash.each do |key, value|
+      %p{class: "flash-#{key}"}= value
     = yield
