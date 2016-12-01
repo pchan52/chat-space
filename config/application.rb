@@ -8,11 +8,18 @@ Bundler.require(*Rails.groups)
 
 module ChatSpace
   class Application < Rails::Application
+    config.i18n.default_locale = :ja
+
     config.generators do |g|
         g.test_framework false
         g.helper false
         g.assets false
     end
+
+    config.action_view.field_error_proc = Proc.new do |html_tag, instance|
+      %Q(#{html_tag}).html_safe
+    end
+    
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
