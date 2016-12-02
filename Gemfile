@@ -34,7 +34,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'rspec-rails'
   gem 'byebug'
+
+  gem "factory_girl_rails"
+  gem 'rails-controller-testing'
+  gem "faker"
 end
 
 group :development do
@@ -48,3 +53,5 @@ end
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-rails'
+
+gem 'pry-rails'
